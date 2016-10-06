@@ -21,12 +21,12 @@ const srcPath = {
   'font': srcDir + '/font/**/*.*'
 };
 
-const publicDir = './public';
+const distDit = './dist';
 const publicPath = {
-  'css': publicDir + '/css',
-  'html': publicDir,
-  'img': publicDir + '/img',
-  'font': publicDir + '/font'
+  'css': distDit + '/css',
+  'html': distDit,
+  'img': distDit + '/img',
+  'font': distDit + '/font'
 };
 
 gulp.task('scss', () => {
@@ -62,7 +62,7 @@ gulp.task('font', () => {
 });
 
 gulp.task('clean:public', () => {
-  return gulp.src(publicDir)
+  return gulp.src(distDit)
     .pipe(clean({
       force: true
     }));
@@ -70,7 +70,7 @@ gulp.task('clean:public', () => {
 
 gulp.task('server', () => {
   connect.server({
-    root: publicDir,
+    root: distDit,
     livereload: true,
     port: 8001
   });
