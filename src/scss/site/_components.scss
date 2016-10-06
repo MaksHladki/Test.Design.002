@@ -1,0 +1,337 @@
+
+.menu {
+    text-align: center;
+    padding-top: 76px;
+    padding-bottom: 40px;
+    @include respond-to('xs') {
+        padding-top: $padding-exlg;
+        padding-bottom: $padding-md;
+    }
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    &__item {
+        margin-right: 40px;
+        @include respond-to('xs') {
+            margin-right: 20px;
+        }
+        display: inline;
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+    &__link {
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        display: inline-block;
+        color: #909090;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 39px;
+        @include respond-to('xs') {
+            margin-bottom: 20px;
+        }
+        &:hover {
+            color: $title-color;
+        }
+        &--active {
+            color: $attention-color;
+        }
+    }
+}
+
+.brand {
+    position: relative;
+    &__inner {
+        position: absolute;
+        left: 50%;
+        width: 260px;
+        height: 105px;
+        margin-left: -130px;
+        top: -76px;
+        box-shadow: $border-shadow;
+        border-radius: $border-radius;
+        background-color: $content-color;
+        @include respond-to('xs') {
+            width: 200px;
+            height: 80px;
+            margin-left: -100px;
+            top: -58px;
+        }
+    }
+    &__name {
+        font-family: 'SourceSansPro-Black';
+        display: block;
+        color: $title-color;
+        font-size: 40px;
+        line-height: 105px;
+        text-align: center;
+        text-transform: uppercase;
+        @include respond-to('xs') {
+            font-size: 30px;
+            line-height: 80px;
+        }
+    }
+}
+
+//banner
+.banner {
+    .banner__image {
+        width: 100%;
+        border-radius: $border-radius;
+        box-shadow: $border-shadow;
+    }
+}
+
+.article {
+    margin-bottom: $margin-exlg;
+    margin-top: $margin-exlg;
+    &--last {
+        margin-bottom: $margin-lg;
+    }
+    @include respond-to('xs') {
+        margin-bottom: $margin-md;
+        margin-top: $margin-md;
+    }
+    @include respond-to('sm') {
+        margin-bottom: $margin-md;
+        margin-top: $margin-md;
+    }
+    &__title {
+        font-size: 32px;
+        color: $title-color;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: $margin-sm;
+        font-weight: bold;
+    }
+    &__subtitle {
+        font-size: 18px;
+        text-align: center;
+        color: $text-color;
+        @include respond-to('xs') {
+            br {
+                display: none;
+            }
+        }
+        @include respond-to('sm') {
+            br {
+                display: none;
+            }
+        }
+    }
+    &__content {
+        margin-top: $margin-exlg;
+        @include respond-to('xs') {
+            margin-top: $margin-md;
+        }
+        @include respond-to('sm') {
+            margin-top: $margin-md;
+        }
+    }
+}
+
+.article-separator {
+    height: 1px;
+    background-color: $border-color;
+}
+
+.media-list {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.media-box {
+    width: 33%;
+    float: left;
+    @include respond-to('xs') {
+        width: 100%;
+    }
+    @include respond-to('sm') {
+        width: 100%;
+    }
+    &__icon {
+        height: 70px;
+        width: 70px;
+        background-color: $title-color;
+        float: left;
+        text-align: center;
+        color: $content-color;
+        line-height: 70px;
+        font-size: 26px;
+        border-radius: $border-radius;
+        box-shadow: $border-shadow;
+    }
+    &__content {
+        margin-left: 70px;
+        padding-left: $padding-md;
+        padding-right: $padding-md;
+        @include respond-to('xs') {
+            padding-left: $padding-sm;
+            padding-right: 0px;
+        }
+    }
+    &__title {
+        font-size: 16px;
+        text-align: left;
+        color: $title-color;
+        margin-bottom: 25px;
+        font-weight: bold;
+        @include respond-to('xs') {
+            margin-bottom: 15px;
+        }
+    }
+    &__text {
+        font-size: 14px;
+        color: $text-color;
+        font-weight: normal;
+    }
+}
+
+.more-info {
+    margin-top: $margin-md;
+    font-weight: bold;
+    @include respond-to('xs') {
+        margin-top: $margin-sm;
+        margin-bottom: $margin-md;
+    }
+    &__link {
+        color: $title-color;
+        font-size: 16px;
+        text-transform: uppercase;
+        i {
+            padding-left: 5px;
+            color: $attention-color;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+}
+
+.card-list {
+    max-width: 870px;
+    width: 100%;
+    margin: 0 auto;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.card {
+    float: left;
+    width: 270px;
+    margin-right: $margin-md;
+    background-color: $box-color;
+    border-radius: $border-radius;
+    box-shadow: $border-shadow;
+    margin-bottom: $margin-md;
+    @include respond-to('xs') {
+        width: 100%;
+        margin-right: 0;
+    }
+    @include respond-to('sm') {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: $margin-md;
+    }
+    @include respond-to('lg') {
+        margin-bottom: 0;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    &__title {
+        padding-top: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 20px;
+        text-align: left;
+        font-size: 16px;
+        color: $title-color;
+        font-weight: bold;
+    }
+    &__text {
+        font-size: 14px;
+        color: $text-color;
+        padding-top: $padding-md;
+        padding-left: $padding-md;
+        padding-right: $padding-md;
+    }
+    &__more-info {
+        margin-top: $margin-md;
+        margin-bottom: $margin-md;
+        padding-left: $padding-md;
+        padding-right: $padding-md;
+    }
+}
+
+.btn-box {
+    &__title {
+        margin-top: 0px;
+        margin-bottom: $margin-md;
+        font-size: 16px;
+        color: $attention-color;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    &__btn-list {
+        text-align: center;
+    }
+}
+
+
+.read-more {
+    margin-top: $margin-exlg;
+    margin-bottom: $margin-exlg;
+    position: relative;
+    padding: 10px 0;
+    @include respond-to('xs') {
+        margin-bottom: 35px;
+        margin-top: 35px;
+    }
+    &__line {
+        height: 1px;
+        background-color: $border-color;
+        margin-bottom: 7px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__btn-wrap {
+        position: absolute;
+        left: 50%;
+        width: 150px;
+        margin-left: -75px;
+        top: -5px;
+        background-color: $content-color;
+        text-align: center;
+    }
+    &__btn {
+        background-color: $attention-color;
+        color: $content-color;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    &--last {
+        margin-bottom: 40px;
+        @include respond-to('xs') {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.picture-box {
+    &__image {
+        width: 100%;
+    }
+    &__caption {}
+}

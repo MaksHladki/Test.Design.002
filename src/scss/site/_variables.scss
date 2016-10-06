@@ -1,0 +1,48 @@
+//variables
+
+//base properties
+$content-width: 1230px;
+$border-radius: 5px;
+$border-shadow: -9px 10px 0px 0px rgba(0, 0, 0, 0.1);
+
+//padding & margin
+$padding-default : 15px;
+$padding-xs: $padding-default / 3;
+$padding-sm: $padding-default;
+$padding-md: $padding-default * 2;
+$padding-lg: $padding-default * 3;
+$padding-exlg: $padding-default * 4;
+$body-margin: $padding-xs;
+
+$margin-default : 15px;
+$margin-xs: $margin-default / 3;
+$margin-sm: $margin-default;
+$margin-md: $margin-default * 2;
+$margin-lg: $margin-default * 3;
+$margin-exlg: $margin-default * 4;
+
+//color
+$content-color: #EBEBEB;
+$content-bg-color: $content-color;
+$border-color: #D2D2D2;
+$box-color: #E2E2E2;
+$title-color: #373435;
+$text-color: #676364;
+$attention-color: #ed3237;
+
+//font
+$font-default: '';
+$font-header: 'SourceSansPro',
+sans-serif;
+
+//url
+$url-font: '../font/';
+$url-font-black: $url-font+'SourceSansPro/Black/';
+$url-font-regular: $url-font+'SourceSansPro/Regular/';
+$url-font-bold: $url-font+'SourceSansPro/Bold/';
+
+//size
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;

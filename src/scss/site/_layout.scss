@@ -1,0 +1,47 @@
+.page {
+    background-image: url('../img/bg.jpg');
+    font-family: $font-header;
+    margin: 0 $body-margin * 2;
+    @include respond-to('xs') {
+        margin: 0 $body-margin;
+    }
+    @include respond-to('sm') {
+        margin: 0 $body-margin;
+    }
+    &__inner {
+        max-width: $content-width;
+        width: 100%;
+        margin: 97px auto 50px auto;
+    }
+}
+
+.content {
+    background-color: $content-bg-color;
+    border-radius: $border-radius;
+    padding: 26px;
+    @include respond-to('xs') {
+        padding: $padding-sm;
+    }
+    @include respond-to('sm') {
+        padding: $padding-sm;
+    }
+}
+
+.header {}
+
+.main {}
+
+.footer {
+    padding-top: $padding-md;
+    text-align: center;
+    &__text {
+        color: $content-color;
+    }
+    &__link {
+        font-size: 16px;
+        color: $content-color;
+        a:hover {
+            color: $title-color;
+        }
+    }
+}
