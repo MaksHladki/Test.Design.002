@@ -22,7 +22,7 @@ const srcPath = {
 };
 
 const distDit = './dist';
-const publicPath = {
+const distPath = {
   'css': distDit + '/css',
   'html': distDit,
   'img': distDit + '/img',
@@ -39,7 +39,7 @@ gulp.task('scss', () => {
     }))
     .pipe(concat('styles.min.css'))
     .pipe(cleanCSS())
-    .pipe(gulp.dest(publicPath.css));
+    .pipe(gulp.dest(distPath.css));
 });
 
 gulp.task('html', () => {
@@ -47,18 +47,18 @@ gulp.task('html', () => {
     .pipe(htmlmin({
       collapseWhitespace: true
     }))
-    .pipe(gulp.dest(publicPath.html));
+    .pipe(gulp.dest(distPath.html));
 });
 
 gulp.task('img', () => {
   return gulp.src(srcPath.img)
     .pipe(imagemin())
-    .pipe(gulp.dest(publicPath.img));
+    .pipe(gulp.dest(distPath.img));
 });
 
 gulp.task('font', () => {
   return gulp.src(srcPath.font)
-    .pipe(gulp.dest(publicPath.font));
+    .pipe(gulp.dest(distPath.font));
 });
 
 gulp.task('clean:public', () => {
