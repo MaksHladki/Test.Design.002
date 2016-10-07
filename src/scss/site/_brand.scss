@@ -1,0 +1,56 @@
+.brand {
+    position: relative;
+    &__inner {
+        height: 105px;
+        min-width: 220px;
+        max-width: 560px;
+        position: absolute;
+        top: -76px;
+        right: 50%;
+        transform: translate(50%, 0);
+        padding: 0 20px;
+        box-shadow: $border-shadow;
+        border-radius: $border-radius;
+        background-color: $content-color;
+        @include respond-to('xs') {
+            height: 60px;
+            max-width: 260px;
+            top: -42px;
+            padding: 0 10px;
+        }
+        @include respond-to('sm') {
+            height: 80px;
+            max-width: 360px;
+            top: -58px;
+        }
+        @include respond-to('md') {
+            height: 90px;
+            max-width: 460px;
+            top: -65px;
+        }
+    }
+    &__name {
+        font-family: 'SourceSansPro-Black';
+        display: block;
+        color: $title-color;
+        font-size: 40px;
+        line-height: 105px;
+        text-align: center;
+        text-transform: uppercase;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        @include respond-to('xs') {
+            font-size: 22px;
+            line-height: 60px;
+        }
+        @include respond-to('sm') {
+            font-size: 26px;
+            line-height: 80px;
+        }
+        @include respond-to('md') {
+            font-size: 32px;
+            line-height: 90px;
+        }
+    }
+}

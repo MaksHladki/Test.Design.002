@@ -1,20 +1,19 @@
-
 .btn {
+    padding: 12px 14px;
+    display: inline-block;
     font-size: 16px;
     border: 1px solid #bfbfbf;
-    box-shadow: -5px 5px 0 0 rgba(0, 0, 0, .1);
-    padding: 12px 14px;
     border-radius: 4px;
+    box-shadow: -5px 5px 0 0 rgba(0, 0, 0, .1);
     cursor: pointer;
     outline: none;
-    display: inline-block;
     text-decoration: none;
     &.btn--primary {
+        margin-right: 11px;
+        margin-bottom: 11px;
         color: $title-color;
         text-transform: uppercase;
         background-color: $content-color;
         box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.1);
-        margin-right: 11px;
-        margin-bottom: 11px;
     }
 }

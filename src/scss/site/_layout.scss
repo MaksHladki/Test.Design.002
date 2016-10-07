@@ -1,7 +1,11 @@
+//variables
+$body-margin: 5px;
+$content-width: 1230px;
 .page {
+    min-width: 320px;
+    margin: 0 $body-margin * 2;
     background-image: url('../img/bg.jpg');
     font-family: $font-header;
-    margin: 0 $body-margin * 2;
     @include respond-to('xs') {
         margin: 0 $body-margin;
     }
@@ -9,8 +13,8 @@
         margin: 0 $body-margin;
     }
     &__inner {
-        max-width: $content-width;
         width: 100%;
+        max-width: $content-width;
         margin: 97px auto 50px auto;
     }
 }
@@ -20,10 +24,10 @@
     border-radius: $border-radius;
     padding: 26px;
     @include respond-to('xs') {
-        padding: $padding-sm;
+        padding: 15px;
     }
     @include respond-to('sm') {
-        padding: $padding-sm;
+        padding: 15px;
     }
 }
 
@@ -32,7 +36,7 @@
 .main {}
 
 .footer {
-    padding-top: $padding-md;
+    padding-top: 30px;
     text-align: center;
     &__text {
         color: $content-color;

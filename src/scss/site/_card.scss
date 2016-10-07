@@ -1,0 +1,54 @@
+.card-list {
+    width: 100%;
+    max-width: 870px;
+    margin: 0 auto;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.card {
+    float: left;
+    width: 270px;
+    margin: 0 30px 30px 0;
+    background-color: $box-color;
+    border-radius: $border-radius;
+    box-shadow: $border-shadow;
+    @include respond-to('xs') {
+        width: 100%;
+        margin-right: 0;
+    }
+    @include respond-to('sm') {
+        width: 100%;
+        margin-right: 0;
+    }
+    @include respond-to('md') {
+        width: calc(33% - 30px);
+    }
+    @include respond-to('lg') {
+        margin-bottom: 0;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    &__title {
+        margin: 0;
+        padding: 40px 30px 20px 30px;
+        text-align: left;
+        font-size: 16px;
+        color: $title-color;
+        font-weight: bold;
+        word-break: break-all;
+    }
+    &__text {
+        font-size: 14px;
+        color: $text-color;
+        padding: 30px 30px 0 30px;
+    }
+    &__more-info {
+        margin: 30px 0;
+        padding: 0 30px;
+    }
+}
